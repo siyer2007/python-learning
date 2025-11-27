@@ -64,3 +64,28 @@ reverserd_str = ""
 for ch in orginal:
     reversed_str = ch + reversed_str
 print(reversed_str)
+
+
+
+fruits = ["apple", "banana", "orange"]
+for i in fruits:
+    print(i)
+
+
+
+sentence = input("Enter your sentence here:")
+spaces = 0
+for ch in sentence:
+    if ch == " ":
+        spaces += 1
+print(spaces)
+
+
+
+original = [5, 8, 12, 3, 7, 10]
+even = []
+for i in original:
+    if i % 2 == 0:
+        even.append(i)
+even_sum = sum(even)
+print(even_sum)
