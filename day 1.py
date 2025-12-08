@@ -61,7 +61,7 @@ print(even_nums)
 
 original = input("Enter your words here: ")
 reverserd_str = ""
-for ch in orginal:
+for ch in original:
     reversed_str = ch + reversed_str
 print(reversed_str)
 
