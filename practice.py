@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 for n in numbers:
     if n % 2 == 0:
@@ -90,3 +91,23 @@ matrix_3 = sum(matrix[2])
 total = matrix_1 + matrix_2 + matrix_3
 print(total)
 print(matrix_1, matrix_2, matrix_3)
+=======
+sentence = input("Enter your sentence here: ")
+def count_vowels(sentence):
+    vowels = 0
+    sentence = sentence.lower()
+    for ch in sentence:
+        if ch in 'aeiou':
+            vowels += 1
+    print("there are", vowels, "in your sentence")
+
+def word_slice(word):
+    word[0:2]
+
+def sum_even(nums):
+    even = []
+    for n in nums:
+        if n % 2 == 0:
+            even.append(n)
+    print(sum[even])
+>>>>>>> 52fe3199eb4d96ef109c01afd9cb817249732479
