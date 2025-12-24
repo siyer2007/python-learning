@@ -82,7 +82,7 @@ def read_file(filename):
         for line in lines:
             striped = line.strip()
             clean_line = striped.split(',')
-            data.append(clean_lines)
+            data.append(clean_line)
     
     rows = data[1:]
 
@@ -99,3 +99,34 @@ def read_file(filename):
             highest_score = total
     
     return f"{first_name} {last_name}: {highest_score}"
+
+def top_department(filename):
+    with open(filename, 'r') as file:
+        data = []
+        lines = file.readlines()
+        for line in lines:
+            striped_line = line.strip()
+            clean_line = striped_line.split(',')
+            data.append(clean_line)
+    
+    rows = data[1:]
+
+    totals = {}
+
+    for row in rows:
+        department = row[1]
+        sales_amount = int(row[2])
+
+        if department not in totals:
+            totals[department] = 0
+        totals[department] += sales_amount
+
+    max_total = -1
+    top_dept = ""
+
+    for dept, total in totals.items():
+        if total > max_total or (total == max_total and dept < top_dept):
+            max_total = total
+            top_dept = dept
+    
+    return f"{top_dept}: {max_total}"
