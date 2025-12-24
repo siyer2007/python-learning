@@ -74,3 +74,28 @@ def top_student(filename):
         score = maths + english + science
         if score > top_score:
             top_score = score
+
+def read_file(filename):
+    with open(filename, 'r') as file:
+        data = []
+        lines = file.readlines()
+        for line in lines:
+            striped = line.strip()
+            clean_line = striped.split(',')
+            data.append(clean_lines)
+    
+    rows = data[1:]
+
+    highest_score = -1
+    for row in rows:
+        first_name = row[0]
+        last_name = row[1]
+        maths = int(row[2])
+        english = int(row[3])
+        science = int(row[4])
+        total = maths + english + science
+
+        if total > highest_score:
+            highest_score = total
+    
+    return f"{first_name} {last_name}: {highest_score}"
