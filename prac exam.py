@@ -54,7 +54,7 @@ def top_student(filename):
     
     rows = data[1:]
 
-     highest = -1
+    highest = -1
     for row in rows:
         first_name = row[0]
         last_name = row[1]
